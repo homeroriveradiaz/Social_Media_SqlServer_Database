@@ -1,0 +1,11 @@
+CREATE TABLE TIMEZONE.TimezonesShifts(
+	TimezonesShiftID INT IDENTITY(-2147483648, 1),
+	TimezoneID INT,
+	ShiftFromUTC INT,
+	FromDate SMALLDATETIME,
+	ToDate SMALLDATETIME
+);
+ALTER TABLE TIMEZONE.TimezonesShifts ADD CONSTRAINT PK_TIMEZONE_TimezonesShifts_TimezonesShiftID PRIMARY KEY (TimezonesShiftID);
+GO
+ALTER TABLE TIMEZONE.TimezonesShifts ADD CONSTRAINT FK_TIMEZONE_TimezonesShifts_TimezoneID FOREIGN KEY (TimezoneID) REFERENCES TIMEZONE.Timezones(TimezoneID);
+GO

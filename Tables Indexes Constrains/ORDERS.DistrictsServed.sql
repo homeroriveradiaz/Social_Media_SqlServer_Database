@@ -1,0 +1,13 @@
+CREATE TABLE ORDERS.DistrictsServed(
+	DistrictServedID BIGINT IDENTITY(-9223372036854775808, 1),
+	UserID BIGINT,
+	DistrictName NVARCHAR(100)
+);
+GO
+ALTER TABLE ORDERS.DistrictsServed ADD CONSTRAINT PK_ORDERS_DistrictsServed_DistrictServedID PRIMARY KEY (DistrictServedID);
+GO
+ALTER TABLE ORDERS.DistrictsServed ADD CONSTRAINT FK_ORDERS_DistrictsServed_UserID FOREIGN KEY (UserID) REFERENCES dbo.Users(UserID);
+GO
+
+
+

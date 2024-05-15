@@ -1,0 +1,34 @@
+USE ReadWrite_Prod;
+GO
+
+SET ANSI_NULLS ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+
+CREATE OR ALTER PROC dbo.Notifications_Delete_NotificationsToAPosting(
+	@UserID BIGINT,
+	@PostingID BIGINT
+) AS
+
+/***********************************************************************
+
+DELETES NOTIFICATIONS FOR A POSTING IN ONE OF THE POSTINGS THIS USER
+RESPONDED TO, AND HAS CLIPPED.
+
+IN OTHER WORDS, IF SOMEBEODY REPLIES TO A THREAD BY THIS USER (BC THIS
+USER FIRST REPLIED TO THE POSTING), THIS USER GETS A NOTIFICATION IN THE 
+POSTING THAT BELONGS TO THAT RESPONSE
+
+THIS SP DELETES THAT NOTIFICATION, 
+
+THIS DELETE IS INTENDED AS AN "I HAVE READ THE MESSAGE" 
+
+***********************************************************************/
+
+DELETE [dbo].[Notifications_ForUserInterface]
+WHERE UserID = @UserID
+	AND NotificationTypeID = 4
+	AND Value1 = @PostingID;
+
+GO

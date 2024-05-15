@@ -1,0 +1,29 @@
+USE ReadWrite_Prod;
+GO
+
+/****** Object:  StoredProcedure [dbo].[Assets_GetAllUsersPictures]    Script Date: 27/09/2017 11:53:23 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE dbo.Images(
+	ImageID BIGINT IDENTITY(-9223372036854775808, 1) NOT NULL
+	, UserID BIGINT NOT NULL
+	, DateCreated SMALLDATETIME NOT NULL
+	, [Image] VARCHAR(200) NOT NULL
+	, Active BIT NOT NULL
+);
+GO
+
+ALTER TABLE dbo.Images
+ADD CONSTRAINT PK_Images_ImageID PRIMARY KEY (ImageID);
+GO
+
+ALTER TABLE dbo.Images
+ADD CONSTRAINT FK_Images_UserID FOREIGN KEY (UserID) REFERENCES dbo.Users(UserID);
+GO
+
+CREATE NONCLUSTERED INDEX NCIX_Images_UserID ON dbo.Images(UserID ASC);
+GO
+
