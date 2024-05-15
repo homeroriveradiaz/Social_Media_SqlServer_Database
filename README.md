@@ -1,10 +1,8 @@
 # Social_Media_SqlServer_Database
 This is a database designed to support a Social Media application, coded for SQL Server 2016 or later.
 
-The intention of this Social Media Application was to enable commerce and advertisement.
-In other words, let consumers have more choices, by enabling every business, however small, to reach consumers.
-The idea was to allow stores with unique inventory to reach to wider audiences. 
-To empower consumers with a wider range of choices and to allow rather small business to thrive.
+The intention of this Social Media Application was to let consumers have more choices, by enabling every business however small to reach consumers.
+In other words, to allow stores with unique inventory to reach to wider audiences, to empower consumers with a wider range of choices and to allow rather small business to thrive.
 
 
 ## Project Description
