@@ -32,7 +32,7 @@ The social Media application has 4 layers:
 5. Xamarin for phone (planned only)
 
 
-##Caveats
+## Caveats
 However complete this is (at least 95% of what I expected it to be), there is some hard-coding which I didn't intend to leave.
 These shall be addressed if no 
 
@@ -52,7 +52,7 @@ https://www.linkedin.com/in/homero-e-rivera/
 Homero Rivera
 
 
-##License
+## License
 MIT License
 
 Copyright (c) 2023 Homero Enrique Rivera Diaz
