@@ -1,4 +1,4 @@
-# Social_Media_SqlServer_Database
+# Social Media Sql Server Database design
 This is a database designed to support a Social Media application, coded for SQL Server 2016 or later.
 
 The intention of this Social Media Application was to let consumers have more choices, by enabling every business however small to reach consumers.
