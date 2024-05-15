@@ -32,11 +32,6 @@ The social Media application has 4 layers:
 5. Xamarin for phone (planned only)
 
 
-## Caveats
-However complete this is (at least 95% of what I expected it to be), there is some hard-coding which I didn't intend to leave.
-These shall be addressed if no 
-
-
 ## How to Use the Project
 The database is 100% compatible with SQL Server 2016 or later, or Azure SQL. 
 Backwards compatibility cannot be warranted.
